@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,tr,td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <a href="{% url 'home' %}">Go To Back</a>
+
+
+    
+       
+        <h1>Song  All Data !!</h1>
+
+        <table>
+            <th>Song Title</th>
+            <th>Song Cat</th>
+            <th>Song Publish Date</th>
+        
+
+             {% for dt in data1 %}
+
+              <tr>
+                <td>{{dt.song_title}}</td>
+                <td>{{dt.song_cat}}</td>
+                <td>{{dt.song_publish_date}}</td>
+              </tr>
+             {% endfor %}
+        </table>
+   
+
+
+        <br>
+
+
+
+
+        <h1>Data Filter Song Name</h1>
+        <table>
+            <th>Song Title</th>
+            <th>Song Cat</th>
+            <th>Song Publish Date</th>
+            
+
+             {% for dt in data2 %}
+
+             <tr>
+                <td>{{dt.song_title}}</td>
+                <td>{{dt.song_cat}}</td>
+                <td>{{dt.song_publish_date}}</td>
+              </tr>
+               
+             {% endfor %}
+        </table>
+
+        <br>
+        <h1>Data Song filter by Song Catogary !!</h1>
+        <table>
+            <th>Song Title</th>
+            <th>Song Cat</th>
+            <th>Song Publish Date</th>
+    
+
+             {% for dt in data3 %}
+
+             <tr>
+                <td>{{dt.song_title}}</td>
+                <td>{{dt.song_cat}}</td>
+                <td>{{dt.song_publish_date}}</td>
+              </tr>
+             {% endfor %}
+        </table>
+
+
+        <br>
+
+
+
+        <h1>Data filter by Song Publish Date</h1>
+        <table>
+            <th>Song Title</th>
+            <th>Song Cat</th>
+            <th>Song Publish Date</th>
+            
+
+             {% for dt in data4 %}
+
+             <tr>
+                <td>{{dt.song_title}}</td>
+                <td>{{dt.song_cat}}</td>
+                <td>{{dt.song_publish_date}}</td>
+              </tr>
+               
+             {% endfor %}
+        </table>
+        
+
+    
+    
+</body>
+</html>

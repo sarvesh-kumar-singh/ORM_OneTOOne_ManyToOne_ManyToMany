@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,tr,td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+  <a href="{% url 'home' %}">Go To Back</a>
+
+
+    
+       
+        <h1>Page All Data !!</h1>
+
+        <table>
+            <th>Page Name</th>
+            <th>Page Catogary</th>
+            <th>Page Post Date</th>
+        
+
+             {% for dt in data1 %}
+
+              <tr>
+                <td>{{dt.page_name}}</td>
+                <td>{{dt.page_cat}}</td>
+                <td>{{dt.page_post_date}}</td>
+              </tr>
+               
+             {% endfor %}
+        </table>
+
+        <br>
+
+        <h1>Data Filter by Page Name</h1>
+        <table>
+            <th>Pagr_Name</th>
+            <th>Page_catogary</th>
+            <th>Page_post_date</th>
+
+             {% for dt in data2 %}
+
+              <tr>
+                <td>{{dt.page_name}}</td>
+                <td>{{dt.page_cat}}</td>
+                <td>{{dt.page_post_date}}</td>
+              </tr>
+               
+             {% endfor %}
+        </table>
+
+        <br>
+        <h1>Dat filter by Page Catogary !!</h1>
+        <table>
+            <th>Page_Name</th>
+            <th>Page_cat</th>
+            <th>Page_post_date</th>
+
+             {% for dt in data3 %}
+
+              <tr>
+                <td>{{dt.page_name}}</td>
+                <td>{{dt.page_cat}}</td>
+                <td>{{dt.page_post_date}}</td>
+              </tr>
+               
+             {% endfor %}
+
+        </table>
+
+    
+    
+</body>
+</html>

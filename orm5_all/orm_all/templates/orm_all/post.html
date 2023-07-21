@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,tr,td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <a href="{% url 'home' %}">Go To Back</a>
+
+
+    
+       
+        <h1>Post  All Data !!</h1>
+
+        <table>
+            <th>Post Name</th>
+            <th>Post Cat</th>
+            <th>Post Publish Date</th>
+        
+
+             {% for dt in data1 %}
+
+              <tr>
+                <td>{{dt.post_name}}</td>
+                <td>{{dt.post_cat}}</td>
+                <td>{{dt.post_publish_date}}</td>
+              </tr>
+             {% endfor %}
+        </table>
+   
+
+
+        <br>
+
+
+
+
+        <h1>Data Filter Post Name</h1>
+        <table>
+            <th>Post Name</th>
+            <th>Post Cat</th>
+            <th>Post Publish Date</th>
+            
+
+             {% for dt in data2 %}
+
+             <tr>
+                <td>{{dt.post_name}}</td>
+                <td>{{dt.post_cat}}</td>
+                <td>{{dt.post_publish_date}}</td>
+              </tr>
+               
+             {% endfor %}
+        </table>
+
+        <br>
+        <h1>Dat filter by Post Catogary !!</h1>
+        <table>
+            <th>Post Name</th>
+            <th>Post Cat</th>
+            <th>Post Publish Date</th>
+    
+
+             {% for dt in data3 %}
+
+             <tr>
+                <td>{{dt.post_name}}</td>
+                <td>{{dt.post_cat}}</td>
+                <td>{{dt.post_publish_date}}</td>
+              </tr>
+             {% endfor %}
+        </table>
+
+
+        <br>
+
+
+
+        <h1>Data filter by Post Publish Date</h1>
+        <table>
+            <th>Post Name</th>
+            <th>Post Cat</th>
+            <th>Post Publish Date</th>
+            
+
+             {% for dt in data4 %}
+
+             <tr>
+                <td>{{dt.post_name}}</td>
+                <td>{{dt.post_cat}}</td>
+                <td>{{dt.post_publish_date}}</td>
+              </tr>
+               
+             {% endfor %}
+        </table>
+        
+
+    
+    
+</body>
+</html>
